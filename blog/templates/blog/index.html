@@ -1,0 +1,103 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-md-6 col-12 text-center mt-5 mb-5">
+            <h1 class="fw-bolder" style="font-family: monospace; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.3);">Blog Jikkosoft</h1>
+            <h5 class="text-muted" style="font-family: monospace; font-weight: bold;">¡Únete a nuestra comunidad y mantente al tanto de las últimas tendencias!</h5>
+        </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-md-6 col-12 mx-md-auto mx-3 mt-5 mb-5">
+            <h1 class="fw bolder" style="font-family: monospace; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.3);">Blog Jikkosoft</h1>
+            <h5 class="text-muted" style="font-family: monospace; font-weight: bold;">Lecturas interesantes: Tendencia </h5>
+        </div>
+    </div> -->
+
+    {% if request.user.is_authenticated %}
+        {% for object in object_list %}
+        <div class="row">
+            <div class="col-md-6 col-12 mx-md-auto mx-3 mt-5 mb-5">
+
+                <h3 class="fw-bold"> {{ object.titulo }} </h3>
+                <p class="text-muted"> {{ object.fecha }} </p>
+                <p class="text-muted"> {{ object.contenido|truncatewords_html:500|safe }} </p>
+                <p class="text-muted">Posted by {{ object.autor.username }}</p>           
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="media\imagenes\jikkosoft.png" class="card-img-top" alt="Descripción de la imagen">
+          <div class="card-body">
+            <h2 class="card-title">Empresas</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="media/imagenes/IMG1.avif" class="card-img-top" alt="Descripción de la imagen">
+          <div class="card-body">
+            <h2 class="card-title">Ciencia</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="media/imagenes/img3.webp" class="card-img-top" alt="Descripción de la imagen">
+          <div class="card-body">
+            <h2 class="card-title">Deportes</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="media/imagenes/img4.jpeg" class="card-img-top" alt="Descripción de la imagen">
+          <div class="card-body">
+            <h2 class="card-title">Tecnologia</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    {% endif %}   
+
+
+
+{% endblock content %}
+
+
+<!-- <div class="container mt-4">
+    <div class="row">
+        <article class="col-md-4 mb-4">
+            <img src="media\imagenes\IMG1.avif" alt="Descripción de la imagen" class="card-img-top">
+            <h2>Título del Artículo</h2>
+            
+        </article>
+        <article class="col-md-4 mb-4">
+            <img src="media\imagenes\img2.png" alt="Descripción de la imagen" class="card-img-top">
+            <h2>Título del Artículo</h2>
+            
+            
+        </article>
+        <article class="col-md-4 mb-4">
+            <img src="media\imagenes\img3.webp" alt="Descripción de la imagen" class="card-img-top">
+            <h2>Título del Artículo</h2>
+            
+            
+        </article>
+        <article class="col-md-4 mb-4">
+            <img src="media\imagenes\img4.jpeg" alt="Descripción de la imagen" class="card-img-top">
+            <h2>Título del Artículo</h2>
+            
+            
+        </article>
+    </div>
+</div> -->

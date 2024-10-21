@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+
+<h1>Artículos etiquetados con "{{ etiqueta.nombre }}"</h1>
+<ul>
+    {% for articulo in articulos %}
+        <li>{{ articulo.titulo }}</li>
+    {% endfor %}
+</ul>

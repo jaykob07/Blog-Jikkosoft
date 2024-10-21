@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    
+    <div class="row">
+        <div class="col-11 col-md-4 mx-auto mt-5">
+            <h2>Se ha cerrado sesión</h2>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <a href="{% url 'login' %}">Iniciar sesión nuevamente</a>
+                </small>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
