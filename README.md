@@ -49,5 +49,6 @@ pip install django
 
 Realiza las migraciones y ejecuta el servidor:
 
+python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
