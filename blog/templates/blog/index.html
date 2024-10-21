@@ -10,12 +10,8 @@
         </div>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-md-6 col-12 mx-md-auto mx-3 mt-5 mb-5">
-            <h1 class="fw bolder" style="font-family: monospace; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.3);">Blog Jikkosoft</h1>
-            <h5 class="text-muted" style="font-family: monospace; font-weight: bold;">Lecturas interesantes: Tendencia </h5>
-        </div>
-    </div> -->
+    
+    <!-- aqui mostramos el contenido del usuario ya ingresado -->
 
     {% if request.user.is_authenticated %}
         {% for object in object_list %}
@@ -29,75 +25,50 @@
             </div>
         </div>
         {% endfor %}
+
+        <!-- aqui si no se a ingresado mostramos el home -->
+
     {% else %}
         
-<div class="container mt-4">
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="media\imagenes\jikkosoft.png" class="card-img-top" alt="Descripción de la imagen">
-          <div class="card-body">
-            <h2 class="card-title">Empresas</h2>
-          </div>
+        <div class="container mt-4">
+            <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                <img src="media\imagenes\jikkosoft.png" class="card-img-top" alt="Descripción de la imagen">
+                <div class="card-body">
+                    <h2 class="card-title">Empresas</h2>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                <img src="media/imagenes/IMG1.avif" class="card-img-top" alt="Descripción de la imagen">
+                <div class="card-body">
+                    <h2 class="card-title">Ciencia</h2>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                <img src="media/imagenes/img3.webp" class="card-img-top" alt="Descripción de la imagen">
+                <div class="card-body">
+                    <h2 class="card-title">Deportes</h2>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                <img src="media/imagenes/img4.jpeg" class="card-img-top" alt="Descripción de la imagen">
+                <div class="card-body">
+                    <h2 class="card-title">Tecnologia</h2>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="media/imagenes/IMG1.avif" class="card-img-top" alt="Descripción de la imagen">
-          <div class="card-body">
-            <h2 class="card-title">Ciencia</h2>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="media/imagenes/img3.webp" class="card-img-top" alt="Descripción de la imagen">
-          <div class="card-body">
-            <h2 class="card-title">Deportes</h2>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="media/imagenes/img4.jpeg" class="card-img-top" alt="Descripción de la imagen">
-          <div class="card-body">
-            <h2 class="card-title">Tecnologia</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
     {% endif %}   
 
 
 
 {% endblock content %}
 
-
-<!-- <div class="container mt-4">
-    <div class="row">
-        <article class="col-md-4 mb-4">
-            <img src="media\imagenes\IMG1.avif" alt="Descripción de la imagen" class="card-img-top">
-            <h2>Título del Artículo</h2>
-            
-        </article>
-        <article class="col-md-4 mb-4">
-            <img src="media\imagenes\img2.png" alt="Descripción de la imagen" class="card-img-top">
-            <h2>Título del Artículo</h2>
-            
-            
-        </article>
-        <article class="col-md-4 mb-4">
-            <img src="media\imagenes\img3.webp" alt="Descripción de la imagen" class="card-img-top">
-            <h2>Título del Artículo</h2>
-            
-            
-        </article>
-        <article class="col-md-4 mb-4">
-            <img src="media\imagenes\img4.jpeg" alt="Descripción de la imagen" class="card-img-top">
-            <h2>Título del Artículo</h2>
-            
-            
-        </article>
-    </div>
-</div> -->
