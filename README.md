@@ -5,6 +5,9 @@
 
 Este proyecto es un Blog de Tendencias donde los usuarios pueden registrarse, iniciar sesión y compartir artículos sobre temas como tecnología, ciencia y deportes. La plataforma permite a los usuarios subir, descargar, editar y eliminar entradas de blog
 
+ ![image Alt](https://github.com/jaykob07/Blog-Jikkosoft/blob/main/jk1.png?raw=true)
+ ![image Alt](https://github.com/jaykob07/Blog-Jikkosoft/blob/main/jk2.png?raw=true)
+ ![image Alt](https://github.com/jaykob07/Blog-Jikkosoft/blob/main/jk3.png?raw=true)
 
 # Características
 
